@@ -21,12 +21,23 @@ body {
     background-color: #145555;
 }
 
+.main {
+    background-color: #1D654E;
+    background-image: url("img/patterny.png");
+    background-size: cover;
+    background-position: center;
+}
 
+.bar {
+    background-color: #FFFDE4;
+    background-size: cover;
+    background-position: center;
+}
 
 
 .imgflex {
-    max-width: 180px;
-    height: 180px;
+    max-width: 200px;
+    height: 200px;
 }
 
 .headery {
@@ -58,7 +69,7 @@ body {
 
 .flex-item {
     flex: 1;
-    max-width: 200px;
+    max-width: 250px;
 
     padding: 10px;
     background-color: #2e7e63;
