@@ -87,3 +87,12 @@ body {
     top: 15px;
     right: 10.5%;
 }
+
+.leafer {
+    max-width: 12%;
+    height: 12%;
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10.5%;
+}
