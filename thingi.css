@@ -22,7 +22,6 @@ body {
 
 .main {
     background-color: #1D654E;
-    background-image: url("img/patterny.png");
     background-size: cover;
     background-position: center;
 }
@@ -85,6 +84,6 @@ body {
     height: 10%;
     display: block;
     position: absolute;
-    top: 2px;
+    top: 15px;
     right: 10.5%;
 }
