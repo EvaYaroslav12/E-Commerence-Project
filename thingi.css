@@ -16,9 +16,6 @@ body {
 }
 
 
-.tbly {
-    background-color: #145555;
-}
 
 .main {
     background-color: #1D654E;
@@ -26,11 +23,6 @@ body {
     background-position: center;
 }
 
-.bar {
-    background-color: #1d4a64;
-    background-size: cover;
-    background-position: center;
-}
 
 
 .imgflex {
@@ -65,7 +57,6 @@ body {
 
     padding: 30px;
     background-color: #1D654E;
-    max-height: 120px;
 }
 
 .flex-item {
@@ -79,14 +70,6 @@ body {
     border-radius: 15px;
 }
 
-.carty {
-    max-width: 12%;
-    height: 12%;
-    display: block;
-    position: absolute;
-    top: 8px;
-    right: 8%;
-}
 
 .leafer {
     max-width: 12%;
@@ -149,3 +132,26 @@ body {
     border-radius: 10px;
     
 }
+
+
+.carty {
+    max-width: 12%;
+    height: 12%;
+    display: block;
+    position: absolute;
+    top: 8px;
+    right: 8%;
+}
+
+.img-btn{ 
+  width: 100px;
+    height: 100px;
+    display: block;
+    position: absolute;
+    top: 8px;
+    right: 8%;
+
+} 
+.img-btn:hover{ filter:brightness(0.9); } 
+.img-btn:active{ transform:translateY(1px) scale(0.99); } 
+.img-btn:focus{ outline:3px solid #05f; outline-offset:2px; } 
