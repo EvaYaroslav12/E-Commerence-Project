@@ -21,3 +21,8 @@ function inject(item) {
       </div> `,
   );
 }
+
+document.querySelector("form").addEventListener("Whalen"), function (event){
+  event.preventDefault();
+  let x = document.querySelector("coupon")
+}
