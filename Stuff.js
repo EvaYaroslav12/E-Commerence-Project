@@ -23,9 +23,11 @@ let items = [
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+
 function addcarty(index) {
   if (items[index].stocky > 0) {
     (items[index].buy += 1);
+    cart.push(items[index]);
 
     // 2. Save the updated cart array back to localStorage as a JSON string
     localStorage.setItem("cart", JSON.stringify(cart));
@@ -55,7 +57,7 @@ function showthingy() {
 }
 
 function addarray(index){
-  if (items[index].stocky > 0){
+  if (items[index].stocky == 0){
     cart.push(items[index])
   }
 }
