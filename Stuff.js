@@ -17,7 +17,7 @@ let items = [
   { namey: "Weird Dog", pricey: 1.99, catgorey: ["game", "worthless", "undertale/deltarune"], imagey: "images/doge.jpeg", buy: 0, stocky: 1, desky: "smells like dog" },
   { namey: "MissingNo.", pricey: 24.0, catgorey: ["worthless"], imagey: "images/MissingNo.svg.webp", buy: 0, stocky: 9999, desky: "" },
   { namey: "Whalens Pokemon Taste", pricey: 4.99, catgorey: ["worthless"], imagey: "images/huh.webp", buy: 0, stocky: 4, desky: "\"leafeon is the worst eeveelution\" -Whalen" },
-  { namey: "Olivia's Sanity", pricey: 0, catgorey: ["worthless", "stabby"], imagey: "images/null.png", buy: 0, stocky: 0, desky: "null" },
+  { namey: "Olivia's Sanity", pricey: 0, catgorey: ["worthless", "stabby"], imagey: "images/null.png", buy: 0, stocky: 0, desky: "3749 Hylan Blvd" },
   { namey: "whalen", pricey: -0.99, catgorey: ["worthless"], imagey: "images/leafeon.jpg", buy: 0, stocky: 3, desky: "five bucks ill sell you his address" },
 ];
 
