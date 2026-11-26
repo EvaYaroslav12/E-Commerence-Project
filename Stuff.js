@@ -95,6 +95,12 @@ if (cart.length>1)
       </div>`
     );
   }
+
+  document.querySelector("#cart-total").textContent = `$${countCartTotal().toFixed(2)}`;
+}
+
+function countCartTotal() {
+  return cart.reduce((total, item) => total + item.pricey, 0);
 }
 
 function removecarty(index) {
