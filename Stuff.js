@@ -45,9 +45,9 @@ function showthingy() {
       `<div class="flex-item paragraphy">
     <img class="imgflex" style="position:relative;" src="${items[i].imagey}" alt="fail">
     ${items[i].namey} 
-    &nbsp;
+    <br>
     <button class="remove-btn" onclick="removecarty(${i})"></button>
-    ${items[i].pricey}
+    $${items[i].pricey}
 
     <button class="add-btn" onclick="addcarty(${i})"></button>
     </p>
@@ -56,28 +56,56 @@ function showthingy() {
   }
 }
 
-function addarray(index){
-  if (items[index].stocky == 0){
-    cart.push(items[index])
-  }
-}
 
 function showcart() {
   const container = document.querySelector("#flex-container2");
   container.innerHTML = "";
-  for (let i = 0; i < cart.length; i++) {
+
+let cartwithcounts = []
+
+if (cart.length>0)
+{
+  cartwithcounts.push(cart[0])
+}
+
+if (cart.length>1)
+{
+  for (let i = 1; i < cart.length; i++) {
+    let found = false
+    for(let j = 0; j < cartwithcounts.length; j++)
+    {
+      if (cartwithcounts[j].namey == cart[i].namey )
+      {
+        cartwithcounts[j].buy++; 
+        found = true;
+      }
+    }
+    
+    if (!found)
+    {
+        cartwithcounts.push(cart[i])
+    }
+  }
+}
+  for (let i = 0; i < cartwithcounts.length; i++) {
     container.insertAdjacentHTML("beforeend",
       `<div class="flex-item paragraphy">
-        <img class="imgflex" style="position:relative;" src="${cart[i].imagey}" alt="fail">
-        ${cart[i].desky} ${cart[i].buy}
+        <img class="imgflex" style="position:relative;" src="${cartwithcounts[i].imagey}" alt="fail">
+        ${cartwithcounts[i].namey} x${cartwithcounts[i].buy}
       </div>`
     );
   }
 }
 
 function removecarty(index) {
-  if (items[index] in cart) {
-    cart.splice(cart.indexOf(items[index]), 1);
-    localStorage.setItem("cart", JSON.stringify(cart));
-  }
+  const item = items[index];
+  if (!item) return;
+
+  const cartIndex = cart.findIndex((cartItem) => cartItem.namey === item.namey);
+  if (cartIndex === -1) return;
+
+  cart.splice(cartIndex, 1);
+  item.buy = Math.max(0, item.buy - 1);
+  item.stocky++;
+  localStorage.setItem("cart", JSON.stringify(cart));
 }
